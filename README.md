@@ -1,3 +1,5 @@
+[![Stories in Ready](https://badge.waffle.io/dylanavery720/shoot-the-breeze.svg?label=ready&title=Ready)](http://waffle.io/dylanavery720/shoot-the-breeze)
+
 # Shoot The Breeze
 
 ([Project Specification](http://frontend.turing.io/projects/shoot-the-breeze))
