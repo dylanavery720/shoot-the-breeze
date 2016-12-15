@@ -12,3 +12,9 @@ body {
   height: 100px;
   border: 1px dotted aliceblue;
 }
+
+@media (min-width: 420px) {
+  body {
+    width: 60%;
+  }
+}
