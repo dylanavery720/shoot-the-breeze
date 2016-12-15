@@ -8,6 +8,7 @@ export default class UserInput extends React.Component {
   render() {
     return (
       <input
+        className={this.props.className}
         placeholder="Message…"
         value={ this.props.draftMessage }
         onChange={ this.props.handleChange }

@@ -1,12 +1,58 @@
 @import 'variables.scss';
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans');
 
 body {
-  background: $wtf;
+  background: white;
+  font-size: 18px;
+  font-family: 'Fira Sans', sans-serif;
 }
 
-.hello-world {
-  font-family: $ridiculous;
+.btn {
+  border-radius: 8px;
+  border: none;
+  font-size: 18px;
+  padding: 10px 20px 10px 20px;
+  color: white;
+  outline: none;
 }
+
+.btn:hover {
+  filter: opacity(75%);
+}
+
+.btn:active {
+  filter: opacity(100%);
+}
+
+.btn-log-in, .btn-submit {
+  background: $emerald;
+}
+
+.btn-log-in:active, .btn-submit:active {
+  background: $nephritis;
+}
+
+.btn-clear {
+  background: $alizarin;
+}
+
+.btn-clear:active {
+  background: $pomegranate;
+}
+
+.input {
+  background: $clouds;
+  height: 20px;
+  font-size: 18px;
+  padding: 10px 20px 10px 20px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  color: $midnight-blue;
+}
+
+
+
 
 #new-message--content {
   height: 100px;
