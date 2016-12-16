@@ -7,6 +7,16 @@ body {
   font-family: 'Fira Sans', sans-serif;
 }
 
+.header, .footer {
+  background: $wet-asphalt;
+  width: 100%;
+}
+
+.footer{
+  position: absolute;
+  bottom: 0;
+}
+
 .btn {
   color: white;
   @include input-button-style;
@@ -44,11 +54,24 @@ body {
   }
 }
 
+.btn-sort {
+  background: $peter-river;
+
+  &:active {
+    background: $belize-hole;
+  }
+}
+
+.c-count {
+  color: $clouds;
+  float: right;
+}
 
 .input {
   color: $midnight-blue;
   height: 20px;
   background: $clouds;
+  display: block;
   @include input-button-style;
 }
 
