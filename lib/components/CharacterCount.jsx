@@ -8,7 +8,7 @@ export default class CharacterCount extends React.Component {
   render() {
     return (
       <div>
-        <p>{this.props.count}</p>
+        <p className='c-count'>{this.props.count}</p>
       </div>
     );
   }
