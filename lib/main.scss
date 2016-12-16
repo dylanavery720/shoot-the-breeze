@@ -8,51 +8,49 @@ body {
 }
 
 .btn {
-  border-radius: 8px;
-  border: none;
-  font-size: 18px;
-  padding: 10px 20px 10px 20px;
   color: white;
-  outline: none;
-}
+  @include input-button-style;
 
-.btn:hover {
-  filter: opacity(75%);
-}
+  &:hover {
+   filter: opacity(75%);
+  }
 
-.btn:active {
-  filter: opacity(100%);
+  &:active {
+    filter: opacity(100%);
+  }
+
+  &[disabled] {
+    background: $asbestos;
+
+    &:hover {
+      filter: opacity(100%);
+    }
+  }
 }
 
 .btn-log-in, .btn-submit {
   background: $emerald;
-}
 
-.btn-log-in:active, .btn-submit:active {
-  background: $nephritis;
+  &:active {
+    background: $nephritis;
+  }
 }
 
 .btn-clear {
   background: $alizarin;
+
+  &:active {
+    background: $pomegranate;
+  }
 }
 
-.btn-clear:active {
-  background: $pomegranate;
-}
 
 .input {
-  background: $clouds;
-  height: 20px;
-  font-size: 18px;
-  padding: 10px 20px 10px 20px;
-  border: none;
-  border-radius: 8px;
-  outline: none;
   color: $midnight-blue;
+  height: 20px;
+  background: $clouds;
+  @include input-button-style;
 }
-
-
-
 
 #new-message--content {
   height: 100px;
