@@ -1,20 +1,30 @@
 import React from 'react';
-import moment from 'moment';
+import firebase, { signIn, signOut } from '../firebase';
+import MessageCard from './MessageCard';
 import Button from './Button'
 
-const MessageWindow = ( { messages, deleteCard } ) => {
-
+const MessageWindow = ({ messages, deleteCard }) => {
   return (
-    <ul>
-      { messages.map(m => <li key={m.key}> {m.user.displayName}: {m.content} {moment(m.createdAt).format("MM/D, h:mm:ss a")}
+    <article>
+      <ul>
+         {messages.map(m => <MessageCard
+           messages={m}
+           handleClick={ (e) => { deleteCard(e); } } />) };
+      </ul>
+      <div>
       <Button
-        className='btn btn-delete'
-        text= 'delete'
-        handleClick= { (e) => {deleteCard(e)}}
-      /></li>) }
-    </ul>
+      className="btn btn-log-in"
+      text='Log In'
+      handleClick={ () => signIn() }
+      />
+      <Button
+      className="btn btn-log-out"
+      text='Log Out'
+      handleClick={ () => signOut() }
+      />
+      </div>
+    </article>
   );
-
-}
+};
 
 export default MessageWindow;

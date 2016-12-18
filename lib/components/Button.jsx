@@ -7,6 +7,6 @@ export default class Button extends React.Component {
         className={this.props.className}
         onClick={ this.props.handleClick }
         disabled={this.props.disabled}> {this.props.text} </button>
-    )
+    );
   }
 }

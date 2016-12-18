@@ -2,44 +2,35 @@
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans');
 
 body {
-  background: white;
+  background: $clouds;
   font-size: 18px;
   font-family: 'Fira Sans', sans-serif;
 }
 
-.header, .footer {
-  background: $wet-asphalt;
-  width: 100%;
-  height: 100px;
-  position: fixed;
-  padding: 10px auto;
-
-}
-
 .footer{
   bottom: 0;
-  position: fixed;
-
+  @include header-footer;
 }
 
 .header {
   top: 0;
+  position: fixed;
+  @include header-footer;
 }
 
 .message-window {
-  position: relative;
-  overflow: hidden;
+  overflow: scroll;
+  height: 80%;
+  top: -100px;
 }
 
 .sort-button-container {
   margin: 0 auto;
   text-align: center;
-  // justify-content: center;
-
 }
 
 .btn {
-  color: white;
+  color: $clouds;
   margin-right: 10px;
   @include input-button-style;
 
@@ -68,6 +59,12 @@ body {
   }
 }
 
+.btn-delete {
+  width:10px;
+  height:30px;
+  border-radius: 30%;
+}
+
 .btn-clear {
   background: $alizarin;
 
@@ -77,22 +74,25 @@ body {
 }
 
 .btn-sort {
-  background: $peter-river;
+  background: $belize-hole;
 
   &:active {
-    background: $belize-hole;
+    background: $peter-river;
   }
 }
 
 .c-count {
   color: $clouds;
-  float: right;
+  display: inline;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 18px;
 }
 
 .input {
   color: $midnight-blue;
   background: $clouds;
-  display: block;
   height: 20px;
   margin: auto;
   @include input-button-style;
@@ -101,11 +101,13 @@ body {
 .filter {
   width: 85%;
   margin-bottom: 10px;
+  display: block;
 }
 
-#new-message--content {
-  height: 100px;
-  border: 1px dotted aliceblue;
+.message-field {
+  width: 70%;
+  display: inline;
+  margin: 10px;
 }
 
 @media (min-width: 420px) {
