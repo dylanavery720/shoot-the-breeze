@@ -10,7 +10,7 @@ const MessageCard = ({ messages, handleClick }) => {
         <li key={messages.key}> {messages.user.displayName}: {messages.content} {moment(messages.createdAt).format('MM/D, h:mm:ss a')}
       <Button
         className='btn btn-delete'
-        text= 'delete'
+        text= 'X'
         handleClick= { e => handleClick(e) }
        /></li>
 

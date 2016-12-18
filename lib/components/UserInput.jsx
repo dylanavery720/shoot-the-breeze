@@ -13,6 +13,7 @@ export default class UserInput extends React.Component {
         onChange={ this.props.handleChange }
       />
       <CharacterCount count={140 - this.props.count} />
+        <div className="sort-button-container">
         <Button
           className="btn btn-submit"
           text='Submit'
@@ -24,6 +25,7 @@ export default class UserInput extends React.Component {
           text='Clear'
           handleClick={this.props.clear}
           disabled={this.props.count === 0} />
+          </div>
       </div>
     );
   }
