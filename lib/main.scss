@@ -2,28 +2,20 @@
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans');
 
 body {
-  background: white;
+  background: $clouds;
   font-size: 18px;
   font-family: 'Fira Sans', sans-serif;
-}
-
-.header, .footer {
-  background: $wet-asphalt;
-  width: 100%;
-  height: 100px;
-  position: fixed;
-  padding: 10px auto;
-
 }
 
 .footer{
   bottom: 0;
   position: fixed;
-
+  @include header-footer;
 }
 
 .header {
   top: 0;
+  @include header-footer;
 }
 
 .message-window {
@@ -34,12 +26,10 @@ body {
 .sort-button-container {
   margin: 0 auto;
   text-align: center;
-  // justify-content: center;
-
 }
 
 .btn {
-  color: white;
+  color: $clouds;
   margin-right: 10px;
   @include input-button-style;
 
@@ -77,10 +67,10 @@ body {
 }
 
 .btn-sort {
-  background: $peter-river;
+  background: $belize-hole;
 
   &:active {
-    background: $belize-hole;
+    background: $peter-river;
   }
 }
 
@@ -103,10 +93,10 @@ body {
   margin-bottom: 10px;
 }
 
-#new-message--content {
-  height: 100px;
-  border: 1px dotted aliceblue;
-}
+// #new-message--content {
+//   height: 100px;
+//   border: 1px dotted aliceblue;
+// }
 
 @media (min-width: 420px) {
   body {
