@@ -7,9 +7,9 @@ export default class UserInput extends React.Component {
   render() {
     return (
       <div className="footer">
-        <div className="auth-user">
+        {/* <div className="auth-user"> */}
           <Auth handleSignIn={this.props.handleSignIn} user={this.props.user}/>
-        </div>
+        {/* </div> */}
         <div>
           <input
             className={this.props.className}
