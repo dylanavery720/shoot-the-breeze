@@ -1,10 +1,11 @@
 @import 'variables.scss';
-@import url('https://fonts.googleapis.com/css?family=Fira+Sans');
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500');
 
 body {
   background: $clouds;
   font-size: 18px;
   font-family: 'Fira Sans', sans-serif;
+  font-weight: 400;
 }
 
 .footer{
@@ -20,8 +21,7 @@ body {
 
 .message-window {
   overflow: scroll;
-  height: 80%;
-  top: -100px;
+  padding-top: 100px;
 }
 
 .sort-button-container {
@@ -31,6 +31,7 @@ body {
 
 .btn {
   color: $clouds;
+  font-weight: 300;
   margin-right: 10px;
   @include input-button-style;
 
@@ -81,12 +82,14 @@ body {
   }
 }
 
+.btn-log-out {
+  float: right;
+}
+
 .c-count {
   color: $clouds;
   display: inline;
-  position: absolute;
-  top: 0;
-  right: 0;
+  float: right;
   margin: 18px;
 }
 
@@ -108,6 +111,21 @@ body {
   width: 70%;
   display: inline;
   margin: 10px;
+}
+
+.auth-user {
+  display: block;
+  background: $concrete;
+  position: relative;
+  padding: 20px;
+  height: 50px;
+}
+
+.hello {
+  color: $clouds;
+  font-size: 24px;
+  padding-top: 20px;
+  display: inline;
 }
 
 @media (min-width: 420px) {
