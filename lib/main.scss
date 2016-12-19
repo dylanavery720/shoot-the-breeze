@@ -61,9 +61,10 @@ body {
 }
 
 .btn-delete {
-  width:10px;
-  height:30px;
-  border-radius: 30%;
+  // width:10px;
+  // height:30px;
+  // border-radius: 30%;
+  background: url('/images/delete.svg') no-repeat;
 }
 
 .btn-clear {
@@ -126,6 +127,20 @@ body {
   font-size: 24px;
   padding-top: 20px;
   display: inline;
+}
+
+.date-display {
+  color: $amethyst;
+  font-weight: 300;
+}
+
+.display-name {
+  color: $belize-hole;
+  font-weight: 500;
+}
+
+.message-content {
+  display: block;
 }
 
 @media (min-width: 420px) {
