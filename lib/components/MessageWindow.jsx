@@ -1,13 +1,15 @@
 import React from 'react';
 import MessageCard from './MessageCard';
 
-const MessageWindow = ({ messages, deleteCard }) => {
+const MessageWindow = ({ messages, handleDelete, user }) => {
   return (
     <article>
       <ul>
          {messages.map(m => <MessageCard
-           messages={m}
-           handleClick={ (e) => { deleteCard(e) } } />) }
+           user={user}
+           id={m.key}
+           message={m}
+           handleDelete={handleDelete} />) }
       </ul>
     </article>
   );
