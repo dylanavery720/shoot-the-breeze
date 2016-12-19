@@ -10,7 +10,7 @@ const MessageCard = ({ message, handleDelete, id, user }) => {
         <li> <span className="date-display">{moment(message.createdAt).format('MM/D, h:mm:ss a')}</span>  <span className="display-name">{message.user.displayName}</span>
       <Button
         className='btn btn-delete'
-        text= 'X'
+        text= ''
         handleClick={ () => handleDelete(id) }
        />
        <span className="message-content">{message.content}</span>
