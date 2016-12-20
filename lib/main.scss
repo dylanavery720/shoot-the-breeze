@@ -1,5 +1,6 @@
 @import 'variables.scss';
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500');
+@import url('https://i.icomoon.io/public/temp/ae526182b3/UntitledProject/style.css');
 
 body {
   background: #FFF;
@@ -85,6 +86,14 @@ body {
   }
 }
 
+.icon-arrow-up:before {
+  content: "\ea32";
+}
+
+.icon-arrow-down:before {
+  content: "\ea36";
+}
+
 .btn-log-out {
   vertical-align: center;
 }
@@ -114,6 +123,15 @@ body {
   width: 60%;
   display: inline;
   margin: 10px 0px 10px 20px;
+}
+
+.user-photo {
+  border-radius: 100%;
+  display: inline-block;
+  max-width:50px;
+  max-height:50px;
+  width: auto;
+  height: auto;
 }
 
 .auth-user {

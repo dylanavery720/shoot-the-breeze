@@ -28,11 +28,13 @@ export default class Filter extends React.Component {
       <div className="sort-button-container">
       <Button
         className="btn btn-sort"
-        text="Up"
+        text='Sort'
+        icon={<span className='icon-arrow-up'></span>}
         handleClick={ this.props.sortUp } />
         <Button
           className="btn btn-sort"
-          text="Down"
+          text='Sort'
+          icon={<span className='icon-arrow-down'></span>}
           handleClick={ this.props.sortDown } />
           </div>
       </section>
