@@ -14,6 +14,10 @@ body {
   @include header-footer;
 }
 
+.title {
+  display: none;
+}
+
 .header {
   top: 0;
   position: fixed;
@@ -142,11 +146,8 @@ body {
 }
 
 .hello {
-  color: $clouds;
-  font-size: 12px;
-  display: inline;
-  margin: auto 0;
-  padding: 0 20px;
+  display: none;
+
 }
 
 .date-display {
@@ -162,17 +163,37 @@ body {
 }
 
 .message-content {
-  text-align: left;
+  margin: auto 20px;
+  display: inline-block;
+  padding-bottom: 30px;
+  padding-left: 10px;
+  vertical-align: middle;
+}
+
+
+.talk-box {
+  padding-left: 20px;
+}
+
+.messsage-card {
   display: block;
-  padding-left: 10px
 }
 
-.message-card {
+@media (min-width: 930px) {
 
+  .title {
+    display: inline-block;
+    float: left;
+    color: $clouds;
+    font-weight: 500;
+    vertical-align: middle;
+    margin: 22px 20px;
 
-}
+  }
 
-@media (min-width: 870px) {
+  .message-window {
+    margin-top: 65px;
+  }
 
   .sort-button-container {
     display: inline;
@@ -191,6 +212,14 @@ body {
     font-size: 18px;
   }
 
+
+  .hello {
+    color: $clouds;
+    font-size: 18px;
+    display: inline;
+    margin: auto 0;
+    padding: 0 20px;
+  }
 
 }
 //

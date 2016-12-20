@@ -19,6 +19,7 @@ export default class Filter extends React.Component {
   render() {
     return (
       <section className="header">
+        <h1 className="title"> {this.props.title} </h1>
       <input
         className={this.props.className}
         placeholder="Filter"
