@@ -7,9 +7,9 @@ export default class UserInput extends React.Component {
   render() {
     return (
       <div className="footer">
-        <div className="auth-user">
+        {/* <div className="auth-user"> */}
           <Auth handleSignIn={this.props.handleSignIn} user={this.props.user}/>
-        </div>
+        {/* </div> */}
         <div>
           <input
             className={this.props.className}
@@ -17,7 +17,7 @@ export default class UserInput extends React.Component {
             value={ this.props.draftMessage }
             onChange={ this.props.handleChange }
             />
-          <CharacterCount count={140 - this.props.count} />
+            <CharacterCount count={140 - this.props.count} />
         <div className="sort-button-container">
         <Button
           className="btn btn-submit"
