@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500');
 
 body {
-  background: $clouds;
+  background: #FFF;
   font-size: 18px;
   font-family: 'Fira Sans', sans-serif;
   font-weight: 400;
@@ -21,7 +21,8 @@ body {
 
 .message-window {
   overflow: scroll;
-  padding-top: 100px;
+  margin-top: 110px;
+  margin-bottom: 220px;
 }
 
 .sort-button-container {
@@ -31,6 +32,7 @@ body {
 
 .btn {
   color: $clouds;
+  display: inline-block;
   font-weight: 300;
   margin: 10px;
   @include input-button-style;
@@ -62,6 +64,8 @@ body {
 
 .btn-delete {
   padding-top: 20px;
+  margin-left: 10px;
+  margin-bottom: 5px;
   background: url('./images/delete.svg') no-repeat;
 }
 
@@ -82,8 +86,7 @@ body {
 }
 
 .btn-log-out {
-  float: right;
-  margi: 10px;
+  vertical-align: center;
 }
 
 .c-count {
@@ -110,44 +113,80 @@ body {
 .message-field {
   width: 60%;
   display: inline;
-  margin: 0px 0px 10px 20px;
+  margin: 10px 0px 10px 20px;
 }
 
 .auth-user {
-  display: block;
+  display: flex;
+  justify-content: space-between;
   background: $concrete;
-  position: relative;
-  padding: 20px;
-  height: 50px;
+
 }
 
 .hello {
   color: $clouds;
-  font-size: 16px;
-  padding-top: 20px;
+  font-size: 12px;
   display: inline;
+  margin: auto 0;
+  padding: 0 20px;
 }
 
 .date-display {
   color: $amethyst;
   font-weight: 300;
-  padding: 10px;
+  padding-left: 10px;
 }
 
 .display-name {
   color: $belize-hole;
   font-weight: 500;
-  padding: 10px;
+  padding-left: 10px;
 }
 
 .message-content {
+  text-align: left;
   display: block;
-  padding: 10px
+  padding-left: 10px
 }
 
-@media (min-width: 420px) {
-  body {
-    width: 60%;
-    background: red;
-  }
+.message-card {
+
+
 }
+
+@media (min-width: 870px) {
+
+  .sort-button-container {
+    display: inline;
+  }
+
+  .filter {
+    width: 50%;
+    float: left;
+  }
+
+  .c-count {
+    float: none;
+  }
+
+  .auth-user {
+    font-size: 18px;
+  }
+
+
+}
+//
+// @media (min-width: 870px) {
+//   .sort-button-container {
+//     display: inline;
+//   }
+//
+//   .filter {
+//     width: 50%;
+//     float: left;
+//   }
+//
+//   .c-count {
+//     float: none;
+//   }
+// }
