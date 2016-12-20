@@ -1,7 +1,6 @@
 import React from 'react';
 import Button from './Button';
 
-
 export default class Filter extends React.Component {
   constructor() {
     super();
@@ -14,6 +13,7 @@ export default class Filter extends React.Component {
     this.setState({ query: e.target.value },
       this.props.handleChange(e.target.value));
   }
+
 
 
   render() {
@@ -41,4 +41,20 @@ export default class Filter extends React.Component {
       </section>
     );
   }
+}
+
+export const sortUp = (a, b) => {
+  const timeA = a.createdAt;
+  const timeB = b.createdAt;
+  if (timeA > timeB) { return -1; }
+  if (timeA < timeB) { return 1; }
+  return 0;
+}
+
+export const sortDown = (a, b) => {
+  const timeA = a.createdAt;
+  const timeB = b.createdAt;
+  if (timeA < timeB) { return -1; }
+  if (timeA > timeB) { return 1; }
+  return 0;
 }
