@@ -1,10 +1,21 @@
 import React from 'react';
-import { pick, map, extend, uniq } from 'lodash';
+import { uniq, forOwn, toPairs, values } from 'lodash';
 
 const getUsers = (messages) => {
-  return messages.map(m => {
-  return (<p className="user-list-user">{m.user.displayName} ({m.user.email})</p>);
-})
+
+  let userList = messages.reduce( (users, m) => {
+                   users[m.user.uid] = { name: m.user.displayName, email: m.user.email };
+                   return users;
+                 },
+                 {});
+
+  userList = values(userList);
+
+  return (
+    <ul>
+      { userList.map( u => <li className="user-list-user"> {u.name} ({u.email}) </li> )}
+    </ul>
+  )
 }
 
 const UserList = ( {messages, text} ) => {
