@@ -3,8 +3,7 @@ import Button from './Button';
 import firebase, { signIn, signOut } from '../firebase';
 
 const Auth = ({ user, handleSignIn }) => {
-
-  if(!user) {
+  if (!user) {
     return (
       <div className="auth-user">
       <Button
@@ -15,7 +14,7 @@ const Auth = ({ user, handleSignIn }) => {
       </div>
     )
   }
-    return (
+  return (
       <div className="auth-user">
         <p className="hello"> {user ? `Logged in as ${user.displayName} (${user.email})` : 'Please Log In' } </p>
         <div>

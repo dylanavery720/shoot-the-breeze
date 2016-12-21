@@ -18,8 +18,6 @@ export const sortDown = (a, b) => {
   return 0;
 }
 
-
-
 export default class Filter extends React.Component {
   constructor() {
     super();
@@ -32,8 +30,6 @@ export default class Filter extends React.Component {
     this.setState({ query: e.target.value },
       this.props.handleChange(e.target.value));
   }
-
-
 
   render() {
     return (
