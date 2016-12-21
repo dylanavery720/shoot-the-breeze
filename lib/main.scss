@@ -21,7 +21,7 @@ textarea {
   @include header-footer;
 }
 
-.title {
+.title, .user-list, .hello {
   display: none;
 }
 
@@ -139,10 +139,6 @@ textarea {
   background: $concrete;
 }
 
-.hello {
-  display: none;
-}
-
 .date-display {
   color: $amethyst;
   font-weight: 300;
@@ -161,10 +157,6 @@ textarea {
   padding-bottom: 30px;
   padding-left: 10px;
   vertical-align: middle;
-}
-
-.user-list {
-  display: none;
 }
 
 .talk-box {
