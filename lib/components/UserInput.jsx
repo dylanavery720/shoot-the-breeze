@@ -12,6 +12,7 @@ export default class UserInput extends React.Component {
     this.state = {
       draftMessage: '',
       count: 0,
+      check: false,
     }
         this.addNewMessage = this.addNewMessage.bind(this);
         this.updateState = this.updateState.bind(this);
@@ -34,12 +35,20 @@ export default class UserInput extends React.Component {
   }
 
   updateState(e) {
+    this.countCheck();
+    if(this.state.check){
+      e.preventDefault();
+    } else {
     this.setState({
       draftMessage: e.target.value,
       count: e.target.value.length,
     });
-  }
+   }
+ }
 
+  countCheck() {
+    this.state.count >= 140 ? this.state.check = true : this.state.check = false;
+  }
 
   render() {
     return (
