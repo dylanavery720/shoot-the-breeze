@@ -1,9 +1,9 @@
 import React from 'react';
-import CharacterCount from  './CharacterCount';
+import { pick, map, extend } from 'lodash';
+import CharacterCount from './CharacterCount';
 import Button from './Button';
 import Auth from './Auth';
 import firebase, { reference } from '../firebase';
-import { pick, map, extend } from 'lodash';
 
 export default class UserInput extends React.Component {
 
@@ -12,10 +12,11 @@ export default class UserInput extends React.Component {
     this.state = {
       draftMessage: '',
       count: 0,
+      check: false,
     }
-        this.addNewMessage = this.addNewMessage.bind(this);
-        this.updateState = this.updateState.bind(this);
-        this.clearMessageDraft = this.clearMessageDraft.bind(this);
+    this.addNewMessage = this.addNewMessage.bind(this);
+    this.updateState = this.updateState.bind(this);
+    this.clearMessageDraft = this.clearMessageDraft.bind(this);
   }
 
   clearMessageDraft() {
@@ -34,12 +35,20 @@ export default class UserInput extends React.Component {
   }
 
   updateState(e) {
-    this.setState({
-      draftMessage: e.target.value,
-      count: e.target.value.length,
-    });
+    this.countCheck();
+    if (this.state.check) {
+      // e.preventDefault();
+    } else {
+      this.setState({
+        draftMessage: e.target.value,
+        count: e.target.value.length,
+      });
+    }
   }
 
+  countCheck() {
+    this.state.count >= 140 ? this.state.check = true : this.state.check = false;
+  }
 
   render() {
     return (
