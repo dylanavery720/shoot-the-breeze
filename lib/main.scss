@@ -137,7 +137,6 @@ textarea {
   display: flex;
   justify-content: space-between;
   background: $concrete;
-
 }
 
 .hello {
@@ -168,7 +167,6 @@ textarea {
   display: none;
 }
 
-
 .talk-box {
   padding-left: 20px;
 }
@@ -177,13 +175,17 @@ textarea {
   display: block;
 }
 
-
 .user-list-header {
   font-weight: 500;
 }
 
 .user-list-user {
   padding: 10px;
+
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
 }
 
 .user-list-active {
@@ -194,6 +196,7 @@ textarea {
 @media (min-width: 930px) {
 
   .user-list{
+    display: block;
     right: 0;
     position: fixed;
     background: $clouds;
