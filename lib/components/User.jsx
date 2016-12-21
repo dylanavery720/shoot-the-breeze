@@ -18,7 +18,7 @@ export default class User extends React.Component {
     const userName = this.props.userData.name;
     const userEmail = this.props.userData.email;
     return (
-      <li className="user-list-user">
+      <li onClick={() => this.props.handleClick(this.props.userData.uid)} key={this.props.userData.uid} className="user-list-user">
         {userName.split(' ').shift()} ({userEmail})
         { this.state.active ? <span className="user-list-active fa fa-circle"></span> : undefined }
       </li>
