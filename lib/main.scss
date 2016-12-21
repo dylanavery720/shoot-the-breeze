@@ -127,8 +127,7 @@ textarea {
 .message-field {
   width: 60%;
   display: inline;
-  margin: 0px 0px 10px 20px;
-  vertical-align: middle;
+  margin: 10px 0px 0px 45px;
 }
 
 .user-photo {
@@ -218,6 +217,11 @@ textarea {
 
   .message-window {
     margin-top: 62px;
+  }
+
+  .message-field {
+    vertical-align: middle;
+    margin: 10px 0px 10px 20px;
   }
 
   .sort-button-container {
