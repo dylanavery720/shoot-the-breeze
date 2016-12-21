@@ -16,6 +16,7 @@ export default class UserInput extends React.Component {
     this.addNewMessage = this.addNewMessage.bind(this);
     this.updateState = this.updateState.bind(this);
     this.clearMessageDraft = this.clearMessageDraft.bind(this);
+    this.handleKeyPress = this.handleKeyPress.bind(this);
   }
 
   clearMessageDraft() {
@@ -40,18 +41,25 @@ export default class UserInput extends React.Component {
     });
   }
 
+  handleKeyPress(e) {
+
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      this.addNewMessage();
+    }
+  }
+
   render() {
     return (
       <div className="footer">
-        {/* <div className="auth-user"> */}
-          <Auth handleSignIn={this.props.handleSignIn} user={this.props.user}/>
-        {/* </div> */}
+        <Auth handleSignIn={this.props.handleSignIn} user={this.props.user}/>
         <div>
           <textarea maxLength={140}
             className={this.props.className}
             placeholder="Message…"
             value={ this.state.draftMessage }
             onChange={ this.updateState }
+            onKeyPress={this.handleKeyPress}
             />
             <CharacterCount count={140 - this.state.count} />
         <div className="sort-button-container">

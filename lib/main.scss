@@ -81,7 +81,7 @@ textarea {
   background: url('./images/delete.svg') no-repeat;
 }
 
-.btn-clear {
+.btn-clear, .btn-log-out {
   background: $alizarin;
 
   &:active {
@@ -95,12 +95,6 @@ textarea {
   &:active {
     background: $peter-river;
   }
-}
-
-
-
-.btn-log-out {
-  vertical-align: center;
 }
 
 .c-count {
@@ -148,7 +142,6 @@ textarea {
 
 .hello {
   display: none;
-
 }
 
 .date-display {
@@ -171,6 +164,10 @@ textarea {
   vertical-align: middle;
 }
 
+.user-list {
+  display: none;
+}
+
 
 .talk-box {
   padding-left: 20px;
@@ -180,15 +177,6 @@ textarea {
   display: block;
 }
 
-.user-list{
-  right: 0;
-  position: fixed;
-  background: $clouds;
-  height: 100%;
-  width: 30%;
-  padding: 20px;
-  color: $wet-asphalt;
-}
 
 .user-list-header {
   font-weight: 500;
@@ -205,6 +193,17 @@ textarea {
 
 @media (min-width: 930px) {
 
+  .user-list{
+    right: 0;
+    position: fixed;
+    background: $clouds;
+    height: 100%;
+    width: 30%;
+    padding: 20px;
+    color: $wet-asphalt;
+  }
+
+
   .title {
     display: inline-block;
     float: left;
@@ -212,7 +211,6 @@ textarea {
     font-weight: 500;
     vertical-align: middle;
     margin: 22px 20px;
-
   }
 
   .message-window {
