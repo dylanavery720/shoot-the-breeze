@@ -9,6 +9,13 @@ body {
   font-weight: 400;
 }
 
+textarea {
+    border: none;
+    background-color: transparent;
+    resize: none;
+    outline: none;
+}
+
 .footer{
   bottom: 0;
   @include header-footer;
@@ -120,7 +127,7 @@ body {
 .message-field {
   width: 60%;
   display: inline;
-  margin: 10px 0px 10px 20px;
+  margin: 10px 0px 0px 45px;
 }
 
 .user-photo {
@@ -210,6 +217,11 @@ body {
 
   .message-window {
     margin-top: 62px;
+  }
+
+  .message-field {
+    vertical-align: middle;
+    margin: 10px 0px 10px 20px;
   }
 
   .sort-button-container {
