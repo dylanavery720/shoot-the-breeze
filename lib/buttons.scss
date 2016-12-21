@@ -1,0 +1,70 @@
+@import 'variables.scss';
+
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500');
+
+
+.sort-button-container {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.btn {
+  color: $clouds;
+  display: inline-block;
+  font-weight: 300;
+  margin: 10px;
+  @include input-button-style;
+
+  &:hover {
+   filter: opacity(75%);
+  }
+
+  &:active {
+    filter: opacity(100%);
+  }
+
+  &[disabled] {
+    background: $asbestos;
+
+    &:hover {
+      filter: opacity(100%);
+    }
+  }
+}
+
+.btn-log-in, .btn-submit {
+  background: $emerald;
+
+  &:active {
+    background: $nephritis;
+  }
+}
+
+.btn-delete {
+  padding-top: 20px;
+  margin-left: 10px;
+  margin-bottom: 5px;
+  background: url('./images/delete.svg') no-repeat;
+}
+
+.btn-clear, .btn-log-out {
+  background: $alizarin;
+
+  &:active {
+    background: $pomegranate;
+  }
+}
+
+.btn-sort {
+  background: $belize-hole;
+
+  &:active {
+    background: $peter-river;
+  }
+}
+
+@media (min-width: 930px) {
+  .sort-button-container {
+    display: inline;
+  }
+}

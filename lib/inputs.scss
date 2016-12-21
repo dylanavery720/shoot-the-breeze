@@ -1,0 +1,36 @@
+@import 'variables.scss';
+
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500');
+
+.input {
+  color: $midnight-blue;
+  background: $clouds;
+  height: 20px;
+  margin: auto;
+  @include input-button-style;
+}
+
+.filter {
+  width: 85%;
+  margin-top: 10px;
+  display: block;
+}
+
+.message-field {
+  width: 60%;
+  display: inline;
+  margin: 10px 0px 0px 45px;
+}
+
+@media (min-width: 930px) {
+
+  .message-field {
+    vertical-align: middle;
+    margin: 10px 0px 10px 20px;
+  }
+
+  .filter {
+    width: 50%;
+    float: left;
+  }
+}

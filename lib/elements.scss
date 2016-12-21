@@ -1,0 +1,43 @@
+@import 'variables.scss';
+
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500');
+
+body {
+  background: #FFF;
+  font-size: 18px;
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 400;
+}
+
+textarea {
+    border: none;
+    background-color: transparent;
+    resize: none;
+    outline: none;
+}
+
+.footer{
+  bottom: 0;
+  @include header-footer;
+}
+
+
+.header {
+  top: 0;
+  position: fixed;
+  @include header-footer;
+}
+
+.message-window {
+  overflow: scroll;
+  margin-top: 110.5px;
+  margin-bottom: 220px;
+}
+
+
+
+@media (min-width: 930px) {
+  .message-window {
+    margin-top: 62px;
+  }
+}
