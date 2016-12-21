@@ -1,19 +1,31 @@
 import React from 'react';
-import { pick, map, extend, uniq } from 'lodash';
+import { values } from 'lodash';
+import User from './User';
 
-const getUser = (messages) => {
-  return messages.map(m => {
-    return (<p className="user-list-user">{m.user.displayName} ({m.user.email})</p>)
-  })
+const getUsers = (messages, currentUser) => {
+
+  let userList = messages.reduce( (users, m) => {
+                   users[m.user.uid] = { name: m.user.displayName, email: m.user.email, uid: m.user.uid };
+                   return users;
+                 },
+                 {});
+
+  userList = values(userList);
+
+  return (
+    <ul>
+      { userList.map( data => <User className="user-list-user" userData={data} currentUser={currentUser}/> )}
+    </ul>
+  )
 }
 
-const UserList = ({messages, text}) => {
-  return (
+const UserList = ( {messages, text, currentUser} ) => {
+    return (
       <div className='user-list'>
         <h1 className='user-list-header'>{text}</h1>
-          {getUser(messages)}
+          {getUsers(messages, currentUser)}
       </div>
-  )
+    )
 }
 
 export default UserList;
