@@ -9,6 +9,13 @@ body {
   font-weight: 400;
 }
 
+textarea {
+    border: none;
+    background-color: transparent;
+    resize: none;
+    outline: none;
+}
+
 .footer{
   bottom: 0;
   @include header-footer;
