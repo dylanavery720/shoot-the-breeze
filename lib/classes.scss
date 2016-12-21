@@ -1,0 +1,120 @@
+@import 'variables.scss';
+
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500');
+
+
+.user-photo {
+  border-radius: 100%;
+  display: inline-block;
+  max-width:50px;
+  max-height:50px;
+  width: auto;
+  height: auto;
+}
+
+.auth-user {
+  display: flex;
+  justify-content: space-between;
+  background: $concrete;
+}
+
+.date-display {
+  color: $amethyst;
+  font-weight: 300;
+  padding-left: 10px;
+}
+
+.display-name {
+  color: $belize-hole;
+  font-weight: 500;
+  padding-left: 10px;
+}
+
+.message-content {
+  margin: auto 20px;
+  display: inline-block;
+  padding-bottom: 30px;
+  padding-left: 10px;
+  vertical-align: middle;
+}
+
+.talk-box {
+  padding-left: 20px;
+}
+
+.messsage-card {
+  display: block;
+}
+
+.user-list-header {
+  font-weight: 500;
+}
+
+.user-list-user {
+  padding: 10px;
+
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+.user-list-active {
+  color: $pomegranate;
+  padding-left: 5px;
+}
+
+.title, .user-list, .hello {
+  display: none;
+}
+
+
+.c-count {
+  color: $clouds;
+  display: inline;
+  float: right;
+  margin: 18px;
+}
+
+
+@media (min-width: 930px) {
+
+  .user-list{
+    display: block;
+    right: 0;
+    position: fixed;
+    background: $clouds;
+    height: 100%;
+    width: 30%;
+    padding: 20px;
+    color: $wet-asphalt;
+  }
+
+
+  .title {
+    color: $clouds;
+    display: inline-block;
+    float: left;
+    font-weight: 500;
+    vertical-align: middle;
+    margin: 22px 20px;
+  }
+
+  .c-count {
+    float: none;
+  }
+
+  .auth-user {
+    font-size: 18px;
+  }
+
+
+  .hello {
+    color: $clouds;
+    font-size: 18px;
+    display: inline;
+    margin: auto 0;
+    padding: 0 20px;
+  }
+
+}
