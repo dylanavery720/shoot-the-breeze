@@ -15,7 +15,6 @@ const getUsers = (messages, currentUser) => {
   return (
     <ul>
       { userList.map( data => <User className="user-list-user" userData={data} currentUser={currentUser}/> )}
-
     </ul>
   )
 }

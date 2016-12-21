@@ -14,8 +14,6 @@ export default class Filter extends React.Component {
       this.props.handleChange(e.target.value));
   }
 
-
-
   render() {
     return (
       <section className="header">
