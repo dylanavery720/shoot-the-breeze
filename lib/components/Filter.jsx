@@ -30,12 +30,12 @@ export default class Filter extends React.Component {
       <Button
         className="btn btn-sort"
         text='Sort'
-        icon={<span className='icon-arrow-up'></span>}
+        icon={<span className='fa fa-arrow-up'></span>}
         handleClick={ this.props.sortUp } />
         <Button
           className="btn btn-sort"
           text='Sort'
-          icon={<span className='icon-arrow-down'></span>}
+          icon={<span className='fa fa-arrow-down'></span>}
           handleClick={ this.props.sortDown } />
           </div>
       </section>

@@ -1,6 +1,6 @@
 @import 'variables.scss';
+
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500');
-@import url('https://i.icomoon.io/public/temp/ae526182b3/UntitledProject/style.css');
 
 body {
   background: #FFF;
@@ -90,13 +90,7 @@ body {
   }
 }
 
-.icon-arrow-up:before {
-  content: "\ea32";
-}
 
-.icon-arrow-down:before {
-  content: "\ea36";
-}
 
 .btn-log-out {
   vertical-align: center;
@@ -195,6 +189,11 @@ body {
 
 .user-list-user {
   padding: 10px;
+}
+
+.user-list-active {
+  color: $pomegranate;
+  padding-left: 5px;
 }
 
 @media (min-width: 930px) {

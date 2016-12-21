@@ -1,10 +1,11 @@
 import React from 'react';
-import { uniq, forOwn, toPairs, values } from 'lodash';
+import { values } from 'lodash';
+import User from './User';
 
-const getUsers = (messages) => {
+const getUsers = (messages, currentUser) => {
 
   let userList = messages.reduce( (users, m) => {
-                   users[m.user.uid] = { name: m.user.displayName, email: m.user.email };
+                   users[m.user.uid] = { name: m.user.displayName, email: m.user.email, uid: m.user.uid };
                    return users;
                  },
                  {});
@@ -13,16 +14,17 @@ const getUsers = (messages) => {
 
   return (
     <ul>
-      { userList.map( u => <li className="user-list-user"> {u.name} ({u.email}) </li> )}
+      { userList.map( data => <User className="user-list-user" userData={data} currentUser={currentUser}/> )}
+
     </ul>
   )
 }
 
-const UserList = ( {messages, text} ) => {
+const UserList = ( {messages, text, currentUser} ) => {
     return (
       <div className='user-list'>
         <h1 className='user-list-header'>{text}</h1>
-          {getUsers(messages)}
+          {getUsers(messages, currentUser)}
       </div>
     )
 }
