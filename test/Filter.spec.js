@@ -12,9 +12,9 @@ describe('<Filter />', () => {
   });
 
   it('should have a state of query', () => {
-    const wrapper = mount(<Filter className='filter' handleChange={ ()=>{} } />)
+    const wrapper = mount(<Filter className='filter' handleChange={ () => {} } />)
     const filter = wrapper.find('.filter')
-    filter.simulate('change', filter.node.value = "search")
+    filter.simulate('change', filter.node.value = 'search')
     expect(wrapper.state().query).to.equal('search')
   });
 
@@ -25,7 +25,7 @@ describe('<Filter />', () => {
       handleChange={ updateFilter } />
     );
     const filter = wrapper.find('.filter')
-    filter.simulate('change', filter.node.value = "s")
+    filter.simulate('change', filter.node.value = 's')
     expect(updateFilter).to.have.property('callCount', 1);
   });
 });
