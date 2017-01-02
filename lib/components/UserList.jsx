@@ -3,8 +3,7 @@ import { values } from 'lodash';
 import User from './User';
 
 const getUsers = (messages, currentUser, filterUsers) => {
-
-  let userList = messages.reduce( (users, m) => {
+  let userList = messages.reduce((users, m) => {
     users[m.user.uid] = {
       name: m.user.displayName,
       email: m.user.email,
@@ -26,13 +25,13 @@ const getUsers = (messages, currentUser, filterUsers) => {
   )
 }
 
-const UserList = ({messages, text, currentUser, filterUsers}) => {
-    return (
+const UserList = ({ messages, text, currentUser, filterUsers }) => {
+  return (
       <div className='user-list'>
         <h1 className='user-list-header'>{text}</h1>
           {getUsers(messages, currentUser, filterUsers)}
       </div>
-    )
+  )
 }
 
 export default UserList;

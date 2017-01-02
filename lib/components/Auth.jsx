@@ -25,7 +25,7 @@ const Auth = ({ user, handleSignIn }) => {
         />
         </div>
       </div>
-    )
+  )
 }
 
 export default Auth;

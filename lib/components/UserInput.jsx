@@ -42,7 +42,6 @@ export default class UserInput extends React.Component {
   }
 
   handleKeyPress(e) {
-
     if (e.key === 'Enter') {
       e.preventDefault();
       this.addNewMessage();
