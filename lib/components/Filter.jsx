@@ -40,19 +40,3 @@ export default class Filter extends React.Component {
     );
   }
 }
-
-export const sortUp = (a, b) => {
-  const timeA = a.createdAt;
-  const timeB = b.createdAt;
-  if (timeA > timeB) { return -1; }
-  if (timeA < timeB) { return 1; }
-  return 0;
-}
-
-export const sortDown = (a, b) => {
-  const timeA = a.createdAt;
-  const timeB = b.createdAt;
-  if (timeA < timeB) { return -1; }
-  if (timeA > timeB) { return 1; }
-  return 0;
-}

@@ -1,29 +1,5 @@
 import React from 'react';
-import { values } from 'lodash';
-import User from './User';
-
-const getUsers = (messages, currentUser, filterUsers) => {
-  let userList = messages.reduce((users, m) => {
-    users[m.user.uid] = {
-      name: m.user.displayName,
-      email: m.user.email,
-      uid: m.user.uid };
-    return users;
-  },
-                 {});
-
-  userList = values(userList);
-
-  return (
-    <ul>
-      { userList.map(data => <User key={data.uid}
-                                    className="user-list-user"
-                                    userData={data}
-                                    currentUser={currentUser}
-                                    handleClick={filterUsers}/>)}
-    </ul>
-  )
-}
+import getUsers from '../helpers/getUsers'
 
 const UserList = ({ messages, text, currentUser, filterUsers }) => {
   return (

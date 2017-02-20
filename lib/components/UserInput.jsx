@@ -30,7 +30,6 @@ export default class UserInput extends React.Component {
       content: draftMessage,
       createdAt: Date.now(),
     });
-
     this.setState({ draftMessage: '', count: 0 });
   }
 
