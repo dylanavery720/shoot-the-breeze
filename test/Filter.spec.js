@@ -8,7 +8,7 @@ import Filter from '../lib/components/Filter';
 describe('<Filter />', () => {
   it('renders as a <section>', () => {
     const wrapper = shallow(<Filter />)
-    assert.equal(wrapper.type(), 'section');
+    assert.equal(wrapper.type(), 'section')
   });
 
   it('should have a state of query', () => {
@@ -26,6 +26,6 @@ describe('<Filter />', () => {
     );
     const filter = wrapper.find('.filter')
     filter.simulate('change', filter.node.value = 's')
-    expect(updateFilter).to.have.property('callCount', 1);
+    expect(updateFilter).to.have.property('callCount', 1)
   });
 });
