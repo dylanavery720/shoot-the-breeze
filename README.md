@@ -1,15 +1,7 @@
-[![Stories in Ready](https://badge.waffle.io/dylanavery720/shoot-the-breeze.svg?label=ready&title=Ready)](http://waffle.io/dylanavery720/shoot-the-breeze)
-
 # Shoot The Breeze
 
-([Project Specification](http://frontend.turing.io/projects/shoot-the-breeze))
+## A Chat App Built With Firebase
 
-Setup setups:
+## Overview
+ This is a simple chat app built with a React front end and a Firebase backend. It is deployed to Firebase at [https://shoot-the-breeze-93d19.firebaseapp.com/](https://shoot-the-breeze-93d19.firebaseapp.com/).
 
-- Clone this repository.
-- `npm install`
-- Set up a new Firebase application.
-- Replace the keys in `./lib/firebase.js`.
-- Turn on Google authentication in the Firebase specification.
-- Add the name of your project as the default in the .firebaserc file. This is the name you gave it in firebase, plus the string of characters that firebase appended, e.g. "shoot-the-breeze-aa5d9" 
-- `npm start` or `npm test`.
